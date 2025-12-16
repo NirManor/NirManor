@@ -54,9 +54,8 @@ Designed and validated a groundbreaking approach to multi-agent coordination for
 ### Multi-Robot Waiter System
 
 <div align="center">
-  <img src="media/cognitive_robotics_astar.gif" alt="A* Path Planning" width="400"/>
-  <img src="media/cognitive_robotics_arm.gif" alt="Arm Motion Planning" width="400"/>
-  <p><i>A* navigation planning (left) and RRT* arm manipulation (right)</i></p>
+  <img src="media/cognitive_robotics_arm.gif" alt="RRT* Arm Motion Planning" width="600"/>
+  <p><i>RRT* motion planning for 4-DOF robotic arm manipulation</i></p>
 </div>
 
 **Autonomous multi-robot coordination combining task planning (PDDL) with motion planning (RRT/RRT*)**
@@ -84,8 +83,8 @@ Built complete multi-robot system for autonomous restaurant service, coordinatin
 ### 6-DOF Robotic Arm Control (UR5e)
 
 <div align="center">
-  <img src="media/ai_robotics_ur5e.gif" alt="UR5e 3D Bead Maze Navigation" width="600"/>
-  <p><i>UR5e navigating complex 3D bead-threading maze with orientation constraints</i></p>
+  <img src="media/ai_robotics_ur5e_real.gif" alt="UR5e Real Robot Manipulation" width="600"/>
+  <p><i>Real UR5e robot performing complex manipulation tasks with wooden blocks</i></p>
 </div>
 
 **Complete motion planning system for UR5e collaborative robot**
