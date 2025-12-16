@@ -185,6 +185,11 @@ Developed deep reinforcement learning agents (PPO, A2C) that learn to control a 
 
 ### Multi-Agent Game Search & Machine Learning
 
+<div align="center">
+  <img src="media/intro_ai_game_search.gif" alt="Adversarial Game Search - AI Warehouse" width="600"/>
+  <p><i>Competitive agents using Minimax and Alpha-Beta Pruning in 5×5 warehouse game</i></p>
+</div>
+
 **Game-playing AI and supervised learning implementations**
 
 Implemented classical AI algorithms for adversarial search and machine learning, demonstrating mastery of fundamental decision-making techniques.
