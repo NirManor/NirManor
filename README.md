@@ -3,7 +3,7 @@
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github)](https://github.com/NirManor)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:nir.manor2023@gmail.com)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:il.nir.manor@gmail.com)
 
 **M.Sc. Technion TASP | Automation Engineer @ Unitronics**
 
@@ -19,15 +19,44 @@ M.Sc. student at Technion's TASP (Technion Autonomous Systems Program), focused 
 
 ---
 
+## 🔍 At a Glance
+
+- **Environment-First Aggregate Transport** — Novel planning paradigm for autonomous earthwork with trajectory texture fabric (Python, PyBullet, A*)
+- **Multi-Robot Waiter System** — Task + motion planning with PDDL and RRT* for mobile manipulators
+- **UR5e 6-DOF Planning** — RRT* in C-space, sim-to-real bead maze manipulation
+- **Motion Planning Algorithms** — Minkowski sums, visibility graphs, Weighted A*, RRT/RRT* implementations
+- **Quadcopter RL Control** — PPO/A2C flight stabilization in CoppeliaSim (350K+ timesteps)
+- **KDCR Control Systems** — Inverse dynamics, robust control, adaptive control (5 strategies)
+- **Game AI & Machine Learning** — Minimax, Alpha-Beta, ID3 decision trees, MDPs
+
+---
+
 ## 🔬 Featured Research
 
-### Environment-First Planning for Aggregate Transport (AAMAS 2026)
+### Environment-First Planning for Aggregate Transport
 
 > **Novel environment-centric planning paradigm for autonomous earthwork robotics**
 
-**Publication:** *International Conference on Autonomous Agents and Multiagent Systems (AAMAS), 2026*
+**Publication Status:**
+- ✅ **Accepted:** ACM Symposium on Applied Computing (SAC) 2026 - IRMAS Track
+- 📝 **In preparation:** Extended full paper for future submission
 
 Designed and validated a groundbreaking approach to multi-agent coordination for construction robotics, shifting from traditional rover-centric to environment-centric perspective. The algorithm decouples environment representation from individual agent trajectories, enabling near-constant marginal cost for multi-robot scaling.
+
+<div align="center">
+  <img src="media/problem_statement.png" alt="Problem Overview" width="600"/>
+  <p><i>Autonomous earthwork concept: rovers push aggregates into target formations using environment-centric planning</i></p>
+</div>
+
+<div align="center">
+  <img src="media/heatmap_25x25.png" alt="Trajectory Texture Fabric & Heat Map" width="650"/>
+  <p><i>Core algorithm: trajectory fabric with heat map (red=high flow corridors) guiding aggregate transport to target</i></p>
+</div>
+
+<div align="center">
+  <img src="media/3d_pushing_aggregates_with_curve1.png" alt="3D PyBullet Simulation" width="650"/>
+  <p><i>2D→3D integration: PyBullet simulation with visibility cone constraints and curved pushing trajectory</i></p>
+</div>
 
 **Key Achievements:**
 - 🎯 **Near-linear scaling:** R² = 0.988 across 7,280 test iterations
@@ -45,7 +74,7 @@ Designed and validated a groundbreaking approach to multi-agent coordination for
 
 **Tech Stack:** Python, NumPy, SciPy, Shapely, PyBullet, A* search, dynamic programming
 
-[📑 Published Paper](link-to-paper) | [📁 Local Implementation](../2D%20Algorithm%20and%20Benchmark/)
+[📁 Repository](https://github.com/NirManor/NirManor/tree/main/2D%20Algorithm%20and%20Benchmark) | [📄 Full Paper (PDF)](https://github.com/NirManor/NirManor/blob/main/media/1002_Environment_First_Plannin.pdf)
 
 ---
 
@@ -254,13 +283,13 @@ Developed complete robotic control pipeline from geometric motion to dynamic beh
 ## 📊 Technical Skills
 
 ### Algorithms & Autonomy
-Multi-agent path planning • RRT/RRT* • A* • Dijkstra • SLAM • Extended Kalman Filter • Factor graphs • GTSAM • Belief space planning • Reinforcement learning (PPO, A2C) • MDP • Minimax • Alpha-Beta Pruning • Decision trees
+Multi-agent path planning • RRT/RRT* • A* • Dijkstra • Reinforcement learning (PPO, A2C) • MDP • Minimax • Alpha-Beta Pruning • Decision trees • Dynamic programming
 
 ### Programming & Tools
 Python (primary) • C/C++ (embedded) • MATLAB • ROS • PLC/HMI programming (ladder logic, structured text) • Git • NumPy • SciPy • Matplotlib
 
 ### Robotics & Simulation
-CoppeliaSim • PyBullet • Gazebo • GTSAM (Georgia Tech Smoothing and Mapping) • Forward/inverse kinematics • Jacobian analysis • Collision detection • Trajectory planning
+CoppeliaSim • PyBullet • Gazebo • Forward/inverse kinematics • Jacobian analysis • Collision detection • Trajectory planning
 
 ### Industrial Automation & Protocols
 Motion control systems • Servo synchronization • EtherCAT real-time control • Modbus (RTU/TCP) • CANopen • BACnet/IP • MQTT • Ethernet/IP • SQL connectivity • Raw serial/TCP/CAN (Layer-2)
@@ -270,8 +299,10 @@ Motion control systems • Servo synchronization • EtherCAT real-time control 
 ## 📚 Publications
 
 - **Environment-First Planning for Aggregate Transport: Foundations for Multi-Agent Systems**
-  *International Conference on Autonomous Agents and Multiagent Systems (AAMAS), 2026*
-  **Authors:** Nir Manor, et al.
+  Nir Manor, Federico Oliva, Amir Degani
+  *ACM Symposium on Applied Computing (SAC) 2026 - IRMAS Track* ✅ **Accepted**
+  Extended full paper in preparation for future conference submission
+  [📄 Full Paper (PDF)](https://github.com/NirManor/NirManor/blob/main/media/1002_Environment_First_Plannin.pdf)
 
 ---
 
@@ -292,22 +323,10 @@ Automation and control engineer with expertise in PLC/HMI programming, industria
 
 ---
 
-## 🎯 Why This Portfolio?
-
-This portfolio demonstrates:
-
-✅ **Theory to Practice:** Academic research (AAMAS publication) + industry experience (4+ years Unitronics)
-✅ **Full-Stack Robotics:** From high-level planning (PDDL, A*) to low-level control (Lagrangian dynamics, PID)
-✅ **Multi-Domain Expertise:** Multi-agent systems, motion planning, RL, control theory, industrial automation
-✅ **Production Mindset:** Real hardware validation (UR5e), field deployment, customer support, troubleshooting
-✅ **Algorithm Rigor:** 7,280 test iterations, statistical validation (Wilcoxon p-tests), comprehensive benchmarking
-
----
-
 ## 🔗 Connect
 
-- 📧 **Email:** nir.manor2023@gmail.com
-- 💼 **LinkedIn:** [linkedin.com/in/nir-manor](https://linkedin.com/in/nir-manor)
+- 📧 **Email:** il.nir.manor@gmail.com
+- 💼 **LinkedIn:** [linkedin.com/in/nir-manor-002225162](https://www.linkedin.com/in/nir-manor-002225162/)
 - 🎓 **GitHub:** [github.com/NirManor](https://github.com/NirManor)
 
 ---
