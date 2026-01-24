@@ -79,6 +79,37 @@ Designed and validated a groundbreaking approach to multi-agent coordination for
 
 ---
 
+### Flow Field Navigation & Multi-Robot Coordination
+
+<div align="center">
+  <img src="media/orca_navigation.gif" alt="Multi-Robot ORCA Collision Avoidance" width="600"/>
+  <p><i>4-rover crossing scenario: ORCA-based collision avoidance with sailing priority conflict resolution</i></p>
+</div>
+
+**Hierarchical navigation system combining flow fields, path tracking, and ORCA collision avoidance**
+
+Developed complete navigation stack for autonomous earthwork rovers addressing three interconnected challenges: static obstacle avoidance, precise curved path tracking, and decentralized multi-robot coordination.
+
+**Key Components:**
+- 🗺️ **Flow Field Navigation:** Dijkstra-based distance field with gradient-derived direction for goal-directed movement
+- 🎯 **Path-Guidance Field:** Vector field **v = k_t·t̂ - k_n·e_n·n̂** for curved trajectory tracking
+- 🔧 **Shovel-Point Tracking:** 0.17m forward offset ensuring material follows desired path (not body center)
+- 🤖 **ORCA Collision Avoidance:** Sampling-based velocity selection with TTC checking
+- ⚓ **Sailing Priority:** `priority = 0.5 - 0.5·sin(yaw - wind_dir)` for deterministic conflict resolution
+- 🔄 **Deadlock Resolution:** Priority-based mechanism where yielder freezes and winner rebuilds flow field to escape
+
+**Key Results:**
+- ✅ **Goal Accuracy:** <0.15m tolerance in cluttered environments (90+ obstacles)
+- ✅ **Path Tracking:** <0.1m lateral error on curved trajectories
+- ✅ **Multi-Robot:** 4-rover crossing scenarios resolved without collisions
+- ✅ **ETA Prediction:** <5% error with online adaptation
+
+**Tech Stack:** Python, PyBullet, NumPy, Dijkstra, ORCA, unicycle kinematic model
+
+[📄 Repository](https://github.com/NirManor/Flow-Field-Navigation)
+
+---
+
 ## 🤖 Robotics & Motion Planning
 
 ### Multi-Robot Waiter System
@@ -174,31 +205,6 @@ Implemented and compared fundamental motion planning algorithms from exact metho
 **Tech Stack:** Python, NumPy, Matplotlib, computational geometry, probabilistic roadmaps
 
 [📄 Repository](https://github.com/NirManor/Algorithmic-Motion-Planning)
-
----
-
-### Flow Field Navigation & Multi-Robot Coordination
-
-**Hierarchical navigation system combining flow fields, path tracking, and ORCA collision avoidance**
-
-Developed complete navigation stack for autonomous earthwork rovers addressing three interconnected challenges: static obstacle avoidance, precise curved path tracking, and decentralized multi-robot coordination.
-
-**Key Components:**
-- 🗺️ **Flow Field Navigation:** Dijkstra-based distance field with gradient-derived direction for goal-directed movement
-- 🎯 **Path-Guidance Field:** Vector field **v = k_t·t̂ - k_n·e_n·n̂** for curved trajectory tracking
-- 🔧 **Shovel-Point Tracking:** 0.17m forward offset ensuring material follows desired path (not body center)
-- 🤖 **ORCA Collision Avoidance:** Sampling-based velocity selection with TTC checking
-- ⚓ **Sailing Priority:** `priority = 0.5 - 0.5·sin(yaw - wind_dir)` for deterministic conflict resolution
-
-**Key Results:**
-- ✅ **Goal Accuracy:** <0.15m tolerance in cluttered environments (90+ obstacles)
-- ✅ **Path Tracking:** <0.1m lateral error on curved trajectories
-- ✅ **Multi-Robot:** 4-rover crossing scenarios resolved without collisions
-- ✅ **ETA Prediction:** <5% error with online adaptation
-
-**Tech Stack:** Python, PyBullet, NumPy, Dijkstra, ORCA, unicycle kinematic model
-
-[📄 Repository](https://github.com/NirManor/Flow-Field-Navigation)
 
 ---
 
