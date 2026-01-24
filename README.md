@@ -22,6 +22,7 @@ M.Sc. student at Technion's TASP (Technion Autonomous Systems Program), focused 
 ## 🔍 At a Glance
 
 - **Environment-First Aggregate Transport** — Novel planning paradigm for autonomous earthwork with trajectory texture fabric (Python, PyBullet, A*)
+- **Flow Field Navigation** — Multi-layer navigation: Dijkstra flow fields + path tracking + ORCA multi-robot coordination
 - **Multi-Robot Waiter System** — Task + motion planning with PDDL and RRT* for mobile manipulators
 - **UR5e 6-DOF Planning** — RRT* in C-space, sim-to-real bead maze manipulation
 - **Motion Planning Algorithms** — Minkowski sums, visibility graphs, Weighted A*, RRT/RRT* implementations
@@ -176,6 +177,31 @@ Implemented and compared fundamental motion planning algorithms from exact metho
 
 ---
 
+### Flow Field Navigation & Multi-Robot Coordination
+
+**Hierarchical navigation system combining flow fields, path tracking, and ORCA collision avoidance**
+
+Developed complete navigation stack for autonomous earthwork rovers addressing three interconnected challenges: static obstacle avoidance, precise curved path tracking, and decentralized multi-robot coordination.
+
+**Key Components:**
+- 🗺️ **Flow Field Navigation:** Dijkstra-based distance field with gradient-derived direction for goal-directed movement
+- 🎯 **Path-Guidance Field:** Vector field **v = k_t·t̂ - k_n·e_n·n̂** for curved trajectory tracking
+- 🔧 **Shovel-Point Tracking:** 0.17m forward offset ensuring material follows desired path (not body center)
+- 🤖 **ORCA Collision Avoidance:** Sampling-based velocity selection with TTC checking
+- ⚓ **Sailing Priority:** `priority = 0.5 - 0.5·sin(yaw - wind_dir)` for deterministic conflict resolution
+
+**Key Results:**
+- ✅ **Goal Accuracy:** <0.15m tolerance in cluttered environments (90+ obstacles)
+- ✅ **Path Tracking:** <0.1m lateral error on curved trajectories
+- ✅ **Multi-Robot:** 4-rover crossing scenarios resolved without collisions
+- ✅ **ETA Prediction:** <5% error with online adaptation
+
+**Tech Stack:** Python, PyBullet, NumPy, Dijkstra, ORCA, unicycle kinematic model
+
+[📄 Repository](https://github.com/NirManor/Flow-Field-Navigation)
+
+---
+
 ## 🚁 Reinforcement Learning
 
 ### Quadcopter Autonomous Flight Control
@@ -283,7 +309,7 @@ Developed complete robotic control pipeline from geometric motion to dynamic beh
 ## 📊 Technical Skills
 
 ### Algorithms & Autonomy
-Multi-agent path planning • RRT/RRT* • A* • Dijkstra • Reinforcement learning (PPO, A2C) • MDP • Minimax • Alpha-Beta Pruning • Decision trees • Dynamic programming
+Multi-agent path planning • RRT/RRT* • A* • Dijkstra • Flow fields • ORCA collision avoidance • Reinforcement learning (PPO, A2C) • MDP • Minimax • Alpha-Beta Pruning • Decision trees • Dynamic programming
 
 ### Programming & Tools
 Python (primary) • C/C++ (embedded) • MATLAB • ROS • PLC/HMI programming (ladder logic, structured text) • Git • NumPy • SciPy • Matplotlib
