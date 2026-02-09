@@ -75,7 +75,7 @@ Designed and validated a groundbreaking approach to multi-agent coordination for
 
 **Tech Stack:** Python, NumPy, SciPy, Shapely, PyBullet, A* search, dynamic programming
 
-[📁 Repository](https://github.com/NirManor/NirManor/tree/main/2D%20Algorithm%20and%20Benchmark) | [📄 Full Paper (PDF)](https://github.com/NirManor/NirManor/blob/main/media/1002_Environment_First_Plannin.pdf)
+[📁 Repository](https://github.com/NirManor/NirManor/tree/main/2D%20Algorithm%20and%20Benchmark) | [📄 Full Paper (PDF)](https://github.com/NirManor/NirManor/blob/main/media/Environment_First_Planning__A_Heat_Map_Approach_to_High_Throughput_Aggregate_Transport.pdf)
 
 ---
 
